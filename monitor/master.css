@@ -1,0 +1,108 @@
+th, td, table {
+border: 1px solid black;
+}
+tr, td {
+height: 10px;
+vertical-align: center;
+}
+iframe {
+height: 5vh;
+}
+
+#body {
+position: relative;
+top: 0px;
+}
+table {
+    width: 90vw;
+    max-height: 70vh;
+    min-height: 40vh;
+}
+
+.header {
+    background: linear-gradient(#464646, #000000);
+    color: white;
+    padding: 5px;
+    border: none;
+    height: 10vh;
+    width: 100%;
+    align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+}
+
+.title {
+    text-align: center;
+}
+
+.body {
+    background-color: #F6F6F6;
+}
+
+
+
+
+/* DROPDOWN */
+
+.dropbutton {
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+}
+
+.dropbutton:hover, .dropbutton:focus {
+    background-color: linear-gradient(#464646, #000000);
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownmenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    #box-shadow: none;
+    z-index: 1;
+}
+
+.dropdownmenu a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdownmenu a:hover {background-color: #f1f1f1;}
+
+.dropshown {display: block;}
+
+.title {
+    text-align: center;
+    top: 0;
+    position: absolute;
+    left: 45%
+}
+
+
+
+.iotable {
+    position: relative;
+    top: 15vh;
+    left: 5vw;
+    width: 50%;
+}
+
+
+.statusframe {
+    width: 50px;
+}
+
+
+
+
