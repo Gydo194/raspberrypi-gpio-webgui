@@ -7,6 +7,4 @@
 	echo "\n";
 	system($command);
 	}
-	$file = fopen("./switchdb.csv", "w");
-	fwrite($file, implode(",", $csv));
 ?>

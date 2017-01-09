@@ -1,15 +1,30 @@
 <?php
-    $mode = $_GET["mode"];
-    $pin = $_GET["pin"];
-    $value = $_GET["value"];
+	$pin = $_GET[pin];
+	$value = $_GET[value];
+	$pinmode = $_GET[mode];
+	if($value == "") {
+		if($pinmode != "in") {
+			die("value argument required in out mode");
+		}
+	}
 
-    $db = explode(",", file_get_contents("./db.csv"));
-    $db_write = fopen("./db.csv", "w");
-    
-    $db[$pin] = $value;
-    
-    $database = implode(",", $db);
-    
-    
-    fwrite($db_write, $database);
+	if($pinmode == "in") {
+		$command = "gpio mode " . $pin . " in";
+		echo $command;
+		system($command);
+		return("0");
+	}
+
+
+
+
+
+
+	$init_command = "gpio mode " . $pin . " out";
+	echo($init_command);
+	$command = "gpio -g write " . $pin . " " . $value;
+	echo("<br>");
+	echo($command);
+	system($command);
+
 ?>
